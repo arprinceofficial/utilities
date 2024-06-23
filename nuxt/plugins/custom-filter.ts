@@ -57,7 +57,7 @@ export default defineNuxtPlugin(() => {
                 return dDisplay + hDisplay + mDisplay + sDisplay
             },
             months: (num: any) => {
-                var obj = {
+                var obj: { [key: number]: string } = {
                     1: 'January',
                     2: 'February',
                     3: 'March',
