@@ -42,6 +42,23 @@ getPostDateFormat(d) {
 // post     date format = "sampling_time": "11-01-2023 11:01:00 pm",
 // use date function with this keyword exp this.getPostDateFormat(data.sampling_time)
 
+const format = (str) => {
+    if (str) {
+        const d = new Date(str);
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = `${d.getDate().toString().padStart(2, 0)} ${months[d.getMonth()]} ${d.getFullYear()}, ${hours}:${minutes} ${ampm}`;
+        return strTime;
+    } return ``
+}
+
 let qcsDetail = this.qcs_dtl_data.map((data) => {
     return {
         id: data.id ? Number(data.id) : null,
