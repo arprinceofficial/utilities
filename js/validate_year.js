@@ -24,3 +24,4 @@ const validate_year = (e) => {
             return;
         }
     };
+// regular function useCase => ^(19[0-9]{2}|20[0-9]{2}|2100)$
