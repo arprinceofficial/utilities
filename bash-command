@@ -81,6 +81,8 @@ i) Set proper permissions for the SSH config file:
 chmod 600 ~/.ssh/config
 This sets the file permissions so that only the file's owner can read and write to it, which is required by SSH.
 
+ii) npm run generate => /node_modules/.bin/nuxt: Permission denied:
+chmod +x node_modules/.bin/nuxt
 
 *** get history within one directory ***
 ===========================
