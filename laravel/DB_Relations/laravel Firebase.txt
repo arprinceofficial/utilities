@@ -1,0 +1,128 @@
+1. install package
+----------------------------------------------------------------------- 
+  composer require kreait/firebase-php
+  if laravel > 10 use this => composer require kreait/firebase-php --ignore-platform-req=ext-sodium
+2. Creating a Firebase Service Provider
+-----------------------------------------------------------------------
+   php artisan make:provider FirebaseServiceProvider
+   
+	* register the Provider 
+	(\bootstrap\providers.php) (laravel 11)
+	return [
+    		App\Providers\FirebaseServiceProvider::class,
+	];
+
+	* for laravel bellow < 11
+	config/app.php
+		'providers' => [
+    			// ...
+    			App\Providers\FirebaseServiceProvider::class,
+		],
+
+* wirte code in provider =>
+
+<?php
+
+namespace App\Providers;
+
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\Auth;
+use Illuminate\Support\ServiceProvider;
+
+class FirebaseServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->singleton(
+            'firebase',
+            function ($app) {
+                $firebaseConfig = [
+                    'type' => env('FIREBASE_TYPE', ''),
+                    'project_id' => env('FIREBASE_PROJECT_ID', ''),
+                    'private_key_id' => env('FIREBASE_PRIVATE_KEY_ID', ''),
+                    'private_key' => env('FIREBASE_PRIVATE_KEY', ''),
+                    'client_email' => env('FIREBASE_CLIENT_EMAIL', ''),
+                    'client_id' => env('FIREBASE_CLIENT_ID', ''),
+                    'auth_uri' => env('FIREBASE_AUTH_URI', ''),
+                    'token_uri' => env('FIREBASE_TOKEN_URI', ''),
+                    'auth_provider_x509_cert_url' => env('FIREBASE_AUTH_PROVIDER_X509_CERT_URL', ''),
+                    'client_x509_cert_url' => env('FIREBASE_CLIENT_X509_CERT_URL', ''),
+                ];
+
+                return (new Factory)->withServiceAccount($firebaseConfig)->createAuth();
+            }
+        );
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}
+
+3. Authcontroller
+-----------------------------------------------------------------------
+use Kreait\Firebase\Auth as FirebaseAuth;
+
+public function ssoFirebaseLogin(Request $request)
+    {
+        try {
+            $request->validate([
+                'idToken' => 'required|string',
+            ]);
+
+            $idToken = $request->idToken;
+
+            // Access the firebase instance through the app container
+            $auth = app('firebase');
+            $verifiedIdToken = $auth->verifyIdToken($idToken);
+
+            $email = $verifiedIdToken->claims()->get('email');
+            $uid = $verifiedIdToken->claims()->get('sub');
+            $user = User::where('email', $email)->first();
+
+            if (!$user) {
+                $user = User::create([
+                    'email' => $verifiedIdToken->claims()->get('email'),
+                    'first_name' => $verifiedIdToken->claims()->get('name'),
+                    'password' => $uid,
+                    // 'photo_url' => $verifiedIdToken->claims()->get('picture'),
+                ]);
+            }
+
+            $user->status = 1;
+            $user->save();
+
+            $token = $user->createToken('auth_token')->plainTextToken;
+            $response = [
+                'code' => 200,
+                'status' => 'success',
+                'data' => [
+                    'access_token' => $token,
+                    'user' => $user,
+                ],
+            ];
+
+            return response()->json($response, 200);
+
+        } catch (\Throwable $e) {
+            return response()->json([
+                'errors' => $e->getMessage()
+            ], 422);
+        }
+    }
+
+
+4. api route 
+-----------------------------------------------------------------------
+	* Route::post('sso-login', [AuthController::class, 'ssoFirebaseLogin']);
