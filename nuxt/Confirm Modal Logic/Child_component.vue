@@ -1,5 +1,7 @@
 <template>
   <div class="fa fa-trash-alt cursor-pointer text-red-700" @click="open_confirm_modal(item.id, file_index)"></div>
+  <p class="pb-1">Accepted file formats <em>(pdf, .jpg, .png)</em> <sup>*</sup></p>
+  <p>Upload maximum file size <em>{{ max_file_size }} MB</em> <sup>*</sup></p>
 </template>
 
 <script setup>
