@@ -1,1 +1,7 @@
 git config --global user.email "MY_NAME@example.com"
+
+# Stash or discard local changes
+---------------------------------------
+* To discard all local changes: git reset --hard
+* If there are untracked files you can remove them: git clean -fd
+* For pull in your branch: git pull
