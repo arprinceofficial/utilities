@@ -1,0 +1,63 @@
+name: Automated deployment for NUXT Project to Acceptance
+
+on:
+    push:
+        branches:
+            - acceptance
+
+jobs:
+    build-application:
+        name: Build the application
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Build App artifacts
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+                cache: 'npm'
+            - run: |
+                touch .env
+                echo API_URL_OFFICE="${{ vars.ACC_API_URL_OFFICE }}" >> .env
+                echo API_URL_AGENT="${{ vars.ACC_API_URL_AGENT }}" >> .env
+                npm install
+                npm run build
+                tar -czf output.tar.gz .output
+            - name: Store app artifacts for distribution
+              uses: actions/upload-artifact@v3
+              with:
+                name: app-artifacts
+                path: output.tar.gz
+
+    deploy-application:
+        needs: build-application
+        name: Prepare release on server
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/download-artifact@v3
+              with:
+                name: app-artifacts
+            - name: Upload app-artifacts
+              uses: appleboy/scp-action@master
+              with:
+                host: ${{ secrets.ACC_SERVER_IP }}
+                port: ${{ secrets.ACC_SERVER_PORT }}
+                username: ${{ secrets.ACC_SERVER_USER }}
+                password: ${{ secrets.ACC_SERVER_PASSWORD }}
+                source: output.tar.gz
+                target: ${{ vars.ACC_ARTIFACT_DIR }}
+
+            - name: Extract archive and create directories
+              uses: appleboy/ssh-action@master
+              with:
+                host: ${{ secrets.ACC_SERVER_IP }}
+                port: ${{ secrets.ACC_SERVER_PORT }}
+                username: ${{ secrets.ACC_SERVER_USER }}
+                password: ${{ secrets.ACC_SERVER_PASSWORD }}
+                script: |
+                    cd ${{ vars.ACC_APP_DIR }}
+                    echo "Renaming existing .output folder to .output_old"
+                    mv .output .output_$(date +%Y%m%d%H%M%S)
+                    tar -xzf ${{ vars.ACC_ARTIFACT_DIR }}/output.tar.gz -C ${{ vars.ACC_APP_DIR }}/
+                    rm ${{ vars.ACC_ARTIFACT_DIR }}/output.tar.gz
+                    pm2 restart ${{ vars.ACC_PM2_SL }}
