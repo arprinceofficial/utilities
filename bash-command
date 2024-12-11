@@ -97,3 +97,7 @@ cat passenger.30011.log => (only print the logs)
 ===========================
 cp ".env(example)" .env
 cp .env.example .env
+
+*** Copy ssh from local to server ***
+===========================
+ssh-copy-id -i ~/.ssh/id_rsa.pub userName@ip_address
