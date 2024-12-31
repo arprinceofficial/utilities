@@ -1,3 +1,13 @@
+const convert = (str) => {
+    var date = new Date(str),
+        mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+        day = ("0" + date.getDate()).slice(-2);
+
+    // return [date.getFullYear(), mnth, day].join("/");
+    // return `${day} ${months.value[parseInt(mnth)]} ${date.getFullYear()}`;
+    return `${day} ${$months(parseInt(mnth))} ${date.getFullYear()}`;
+}
+
 getViewDateFormat(d) {
     const monthShortNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     let date = new Date(d);
