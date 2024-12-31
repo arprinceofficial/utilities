@@ -6,9 +6,6 @@ watch(() => props.data.value, () => {
     if (props.data.pre_selected && props.data.pre_selected_col_name === props.data.pre_selected_col_name) {
         store_date.value = props.data.value
     }
-    if (props.preview) {
-        check_data()
-    }
 })
 
 const formateCalDate = (days, store_date) => {
