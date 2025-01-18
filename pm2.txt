@@ -1,0 +1,21 @@
+PM2 Commands
+----------------------------------------------------
+pm2 list
+pm2 start app.js --name my-api (Set Process Name )
+pm2 start .output/server/index.mjs
+---> pm2 start ecosystem.config.js (nuxt 3 project)
+--> pm2 start npx -- serve -s build (react project)
+pm2 save
+
+---> pm2 start <script_path> --name <new_name>
+
+Specific Process ID
+----------------------------------------------------
+pm2 delete 0
+pm2 delete all
+pm2 restart 0
+pm2 stop 0
+pm2 start 0
+
+pm2 log
+pm2 ping
