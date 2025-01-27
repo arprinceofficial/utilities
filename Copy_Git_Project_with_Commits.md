@@ -11,4 +11,4 @@
 ## 6. Add a New Remote Origin
 - git remote add origin https://github.com/Username-2/test-project-2.git
 ## 7. Push to the New Repository
-- git push --all origin or (git push -u origin main)
+- git push --all origin / (git push -u origin main)
