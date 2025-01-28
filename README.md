@@ -4,7 +4,7 @@
 - C:\Windows\System32\drivers\etc   => hosts
 
 ## Host File VS Code Config
- Host ip_address
-  HostName ip_address
-  User user_name
-  IdentityFile C:\Users\arpri\.ssh\_id_rsa
+-  Host ip_address
+-  HostName ip_address
+-  User user_name
+-  IdentityFile C:\Users\arpri\.ssh\_id_rsa
