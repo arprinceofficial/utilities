@@ -55,11 +55,12 @@ cat ~/.ssh/arprince.pub
 nano ~/.ssh/config
 
 - Add this
+```
 Host github.com
   HostName github.com
   User git
   IdentityFile ~/.ssh/arprince (your ssh name)
-
+```
 - 3. Check the SSH agent
   eval "$(ssh-agent -s)"
 
