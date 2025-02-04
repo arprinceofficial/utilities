@@ -3,7 +3,7 @@ PM2 Commands
 pm2 list
 pm2 start app.js --name my-api (Set Process Name )
 pm2 start .output/server/index.mjs
----> pm2 start ecosystem.config.js (nuxt 3 project)
+---> pm2 start ecosystem.config.cjs (nuxt 3 project)
 --> pm2 start npx -- serve -s build (react project)
 pm2 save
 
