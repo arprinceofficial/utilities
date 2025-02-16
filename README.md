@@ -8,3 +8,7 @@
 -  HostName ip_address
 -  User user_name
 -  IdentityFile C:\Users\arpri\.ssh\_id_rsa
+
+## Check HTTPS HOST
+- echo %HTTP_PROXY%
+- set HTTPS_PROXY=%HTTP_PROXY%
