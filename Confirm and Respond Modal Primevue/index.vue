@@ -12,7 +12,7 @@
 	};
 
 	const del_item = async () => {
-		response_modal.value = {status: null};
+		response_modal.value = {};
 		try {
 			const getData = await $fetchAdmin(`admin/tree-entity/delete-menu`, {
 				method: 'POST',
@@ -25,7 +25,11 @@
 				}, 2000);
 			}
 		} catch (e) {
-			console.log('Get Message', e.message);
+			// console.log('here 1',e.response);
+			if(e.response?.status === 404 || e.response?.status === 409){
+                // console.log('here 2',e.response._data);
+				response_modal.value = e.response._data;
+            }
 		} finally {
 			isOpenConModal.value = false;
 		}
