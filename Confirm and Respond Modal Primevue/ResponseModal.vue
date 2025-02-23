@@ -39,7 +39,7 @@ const messageLogs = computed(() => {
         <Dialog v-model:visible="visible" modal :closable="false" :style="{ width: '25rem' }">
             <div class="flex flex-wrap pr-3 pl-3">
                 <div class="flex items-start w-full justify-center items-center">
-                    <div v-if="response_modal.status == null" class="flex justify-center items-center h-40">
+                    <div v-if="Object.keys(response_modal).length == 0" class="flex justify-center items-center h-40">
                         <div class="responsive loader"></div>
                     </div>
                     <div v-else class="text-left font-medium text-gray-900 whitespace-nowrap dark:text-white w-full">
