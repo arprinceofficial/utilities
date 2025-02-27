@@ -1,3 +1,5 @@
+// pm2 start pm2.config.js
+
 module.exports = {
   apps: [
     {
