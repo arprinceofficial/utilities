@@ -12,3 +12,7 @@
 ## Check HTTPS HOST
 - echo %HTTP_PROXY%
 - set HTTPS_PROXY=%HTTP_PROXY%
+
+## Use an Older Version of esbuild (if Needed)
+- npm install esbuild@latest --save-dev
+
