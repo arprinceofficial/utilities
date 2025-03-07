@@ -33,3 +33,7 @@
 # Uninstall phpMyAdmin (If Needed)
 - sudo apt remove --purge phpmyadmin -y
 - sudo apt autoremove -y
+
+# Enable Login Without Password in phpMyAdmin
+- 1. sudo nano /etc/phpmyadmin/config.inc.php
+  2. $cfg['Servers'][$i]['AllowNoPassword'] = true;
