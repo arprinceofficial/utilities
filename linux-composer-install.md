@@ -1,6 +1,6 @@
 # Update System Packages
 - sudo apt update && sudo apt upgrade -y
-# Install Required Dependencies
+# Install Required DependenciesIncrease the Composer Process Timeout
 - sudo apt install php-cli unzip curl -y
 # Download and Install Composer
 - curl -sS https://getcomposer.org/installer | php
@@ -18,3 +18,5 @@
 # Restart PHP and Web Server (If Needed)
 - sudo systemctl restart apache2 # If using Apache
 - sudo systemctl restart php8.4-fpm  # If using PHP-FPM
+# Increase the Composer Process Timeout (if get issue on installing on composer) 
+- composer config --global process-timeout 1200
