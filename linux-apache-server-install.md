@@ -37,3 +37,7 @@
 # Enable Login Without Password in phpMyAdmin
 - 1. sudo nano /etc/phpmyadmin/config.inc.php
   2. $cfg['Servers'][$i]['AllowNoPassword'] = true;
+# Restart Apache and MySQL
+- sudo systemctl restart apache2
+- sudo systemctl restart mysql
+
