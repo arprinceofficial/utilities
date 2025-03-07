@@ -29,4 +29,12 @@
 - sudo phpenmod pdo_mysql
 # Restart Services
 - sudo systemctl restart apache2
+# Verify That pdo_mysql is Enabled
+- php -m | grep mysql
+- php -m | grep pdo
+# Check PHP CLI and Web Versions
+- which php
+- php -v
+- php -i | grep "Loaded Configuration File"
+
 
