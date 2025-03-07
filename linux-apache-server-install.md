@@ -27,7 +27,7 @@
 
 # Troubleshooting phpMyAdmin Login Issues
 - sudo mysql -u root -p
-- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 - FLUSH PRIVILEGES;
 - sudo systemctl restart mysql
 # Uninstall phpMyAdmin (If Needed)
