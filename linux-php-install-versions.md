@@ -10,14 +10,16 @@
 - sudo apt install php7.4
 - sudo apt install php8.0
 - sudo apt install php8.3
-# Install PHP 8 Packages That You Need Example
-- sudo apt install php8.0-common php8.0-mysql php8.0-xml
-# Enable PHP 8 and Restart Your Apache
-- sudo a2dismod php8.2
-- sudo a2enmod php8.0
 # List All Installed PHP Versions
 - update-alternatives --list php or ls -l /usr/bin/php*
 # Switch Between PHP Versions
 - sudo update-alternatives --config php
 # Check php version that now running
 - php -v
+
+
+# Install PHP 8 Packages That You Need Example
+- sudo apt install php8.0-common php8.0-mysql php8.0-xml
+# Enable PHP 8 and Restart Your Apache
+- sudo a2dismod php8.2
+- sudo a2enmod php8.0
