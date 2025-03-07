@@ -15,5 +15,9 @@
 # Enable PHP 8 and Restart Your Apache
 - sudo a2dismod php8.2
 - sudo a2enmod php8.0
+# List All Installed PHP Versions
+- update-alternatives --list php or ls -l /usr/bin/php*
+# Switch Between PHP Versions
+- sudo update-alternatives --config php
 # Check php version that now running
 - php -v
