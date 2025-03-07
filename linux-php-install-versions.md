@@ -1,0 +1,19 @@
+# Add PPA for PHP
+- sudo apt install software-properties-common
+- sudo add-apt-repository ppa:ondrej/php
+- sudo apt-get update
+# Install Php's
+- sudo apt install php5.6
+- sudo apt install php7.1
+- sudo apt install php7.2
+- sudo apt install php7.3
+- sudo apt install php7.4
+- sudo apt install php8.0
+- sudo apt install php8.3
+# Install PHP 8 Packages That You Need Example
+- sudo apt install php8.0-common php8.0-mysql php8.0-xml
+# Enable PHP 8 and Restart Your Apache
+- sudo a2dismod php8.2
+- sudo a2enmod php8.0
+# Check php version that now running
+- php -v
