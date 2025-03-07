@@ -11,7 +11,7 @@
 - sudo apt install php8.0
 - sudo apt install php8.3
 # List All Installed PHP Versions
-- update-alternatives --list php or ls -l /usr/bin/php*
+- update-alternatives --list php     OR     ls -l /usr/bin/php*
 # Switch Between PHP Versions
 - sudo update-alternatives --config php
 # Check php version that now running
