@@ -3,7 +3,7 @@
 ## Host File Location in windows 
 - C:\Windows\System32\drivers\etc   => hosts
 
-## Host File Location in windows 
+## Host File Location in Linux 
 - sudo nano /etc/hosts   => hosts
 
 ## Host File VS Code Config
