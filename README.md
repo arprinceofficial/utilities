@@ -3,6 +3,9 @@
 ## Host File Location in windows 
 - C:\Windows\System32\drivers\etc   => hosts
 
+## Host File Location in windows 
+- sudo nano /etc/hosts   => hosts
+
 ## Host File VS Code Config
 -  Host ip_address
 -  HostName ip_address
