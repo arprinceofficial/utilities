@@ -1,10 +1,6 @@
 - git config --global user.email "ashiqurr04@gmail.com"
 - git config --global user.name "arprinceofficial"
 
-## SSH Key Github Clone
-- ssh-keygen -C safaShop
-- cat /home/arprince/.ssh/id_rsa.pub
-
 ## SSH Key Generate in Server
 - ssh-keygen -t rsa -b 4096 -C "ashiqurr04@gmail.com"
 - cat ~/.ssh/id_rsa.pub  => (view key created key)
