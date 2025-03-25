@@ -37,7 +37,7 @@ ssh -T git@github.com
 - ii) npm run generate => /node_modules/.bin/nuxt: Permission denied:
 - chmod +x node_modules/.bin/nuxt
 
-## Stash or discard local changes
+## Stash or Discard local changes
 - To discard all local changes                     => git reset --hard
 - If there are untracked files you can remove them => git clean -fd
 - For pull in your branch                          => git pull
