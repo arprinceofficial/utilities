@@ -46,3 +46,6 @@ ssh -T git@github.com
 - Rename the Current Branch          => git branch -m new-branch-name
 - Push the Renamed Branch to Remote  => git push origin -u new-branch-name
 - Delete the Old Branch              => git push origin --delete old-branch-name
+
+## Get the Git repository's name
+- git remote show origin
