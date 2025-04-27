@@ -1,7 +1,8 @@
 # Check Installed MySQL Version
 - mysql --version    OR    mysqld --version
 # List Installed MySQL Versions
-- dpkg --list | grep mysql   OR   apt list --installed | grep mysql
+- dpkg --list | grep mysql
+- apt list --installed | grep mysql
 # Manage Multiple MySQL Versions
 - sudo apt install mysql-server-5.7
 - sudo apt install mysql-server-8.0
