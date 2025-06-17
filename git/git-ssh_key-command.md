@@ -12,6 +12,7 @@
 
 ## git clone PROBLEM
 - 1. Ensure your SSH key is added to GitHub
+  2. Run this in terminal => git config --global url."git@github.com:".insteadOf "https://github.com/"
 cat ~/.ssh/arprince.pub
 
 - 2. Confirm your ~/.ssh/config file
