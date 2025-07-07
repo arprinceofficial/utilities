@@ -38,3 +38,9 @@ corepack prepare pnpm@latest --activate
 pnpm install
 
 ```
+
+## If any problem uninstall
+```bash
+ npm uninstall -g corepack
+```
+
