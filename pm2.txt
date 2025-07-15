@@ -21,3 +21,7 @@ pm2 log
 pm2 ping
 
 pm2 restart 0 --name NameProcess
+
+If pm2 server down and if it is save in pm2 then run it
+----------------------------------------------------
+pm2 resurrect
