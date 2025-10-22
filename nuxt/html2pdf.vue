@@ -16,7 +16,7 @@ const exportToPdf = async () => {
 
         const opt = {
             margin: 0,
-            filename: "apsemo-monitoring.pdf",
+            // filename: "apsemo-monitoring.pdf",.
             image: { type: "jpeg", quality: 1 },
             html2canvas: {
                 scale: 2,          // Always render at high resolution
@@ -38,11 +38,11 @@ const exportToPdf = async () => {
 <template>
 
 <Button :icon="isExporting ? 'pi pi-spin pi-spinner' : 'pi pi-print'"
-                                :label="isExporting ? 'Exporting...' : 'Export'" class="p-button-outlined p-button-sm"
-                                :title="'Print'" @click="exportToPdf" />
+    :label="isExporting ? 'Exporting...' : 'Export'" class="p-button-outlined p-button-sm"
+    :title="'Print'" @click="exportToPdf" />
                                 
 <div class="relative" id="pdf-content">
- Data 
+ Content/Data
 </div>
 </template>
 
