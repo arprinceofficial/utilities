@@ -36,14 +36,15 @@ const exportToPdf = async () => {
 </script>
 
 <template>
-
-<Button :icon="isExporting ? 'pi pi-spin pi-spinner' : 'pi pi-print'"
-    :label="isExporting ? 'Exporting...' : 'Export'" class="p-button-outlined p-button-sm"
-    :title="'Print'" @click="exportToPdf" />
-                                
-<div class="relative" id="pdf-content">
- Content/Data
-</div>
+    <div>    
+        <Button :icon="isExporting ? 'pi pi-spin pi-spinner' : 'pi pi-print'"
+            :label="isExporting ? 'Exporting...' : 'Export'" class="p-button-outlined p-button-sm"
+            :title="'Print'" @click="exportToPdf" />
+                                        
+        <div class="relative" id="pdf-content">
+         Content/Data
+        </div>
+    </div>
 </template>
 
 <style>
