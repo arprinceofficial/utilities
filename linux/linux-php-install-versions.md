@@ -11,7 +11,7 @@
 - sudo apt install php8.0
 - sudo apt install php8.3
 
-# After Php Install XML extensions (Debian/Ubuntu) => example for 7.4:
+# After Php installation, Install the XML extensions (Debian/Ubuntu) => example for 7.4:
 - sudo apt update
 - sudo apt install php7.4-xml
 
