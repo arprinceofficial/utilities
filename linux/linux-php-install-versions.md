@@ -10,6 +10,11 @@
 - sudo apt install php7.4
 - sudo apt install php8.0
 - sudo apt install php8.3
+
+# After Php Install XML extensions (Debian/Ubuntu) => example for 7.4:
+- sudo apt update
+- sudo apt install php7.4-xml
+
 # List All Installed PHP Versions
 - update-alternatives --list php     OR     ls -l /usr/bin/php*
 # Switch Between PHP Versions
