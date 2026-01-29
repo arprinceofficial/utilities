@@ -2,7 +2,7 @@
 ```bash
 sudo nano /etc/nginx/sites-available/arprince.me
 ```
-## Step 2: Paste this basic server config
+## Step 2: Paste this basic server config (More Example File is in google drive ashiq04)
 ```bash
 server {
     listen 80;
