@@ -29,7 +29,7 @@ sudo chown -R www-data:www-data /var/www/arprince.me
 ```bash
 sudo chmod -R 755 /var/www/arprince.me
 ```
-# Step 4: Test File
+## Step 4: Test File
 ```bash
 echo "<h1>arprince.me works!</h1>" | sudo tee /var/www/arprince.me/index.html
 ```
