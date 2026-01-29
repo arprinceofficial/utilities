@@ -174,3 +174,9 @@ Client → DNS → Nginx → Server Block → Location → App / Files
 **Done 🎉**
 
 You now have a full Nginx setup on Ubuntu.
+
+🔥 Production-grade Nginx config
+🎥 Video streaming optimization
+📊 Rate limiting
+🧠 How Nginx chooses server blocks
+🐳 Nginx + Docker
