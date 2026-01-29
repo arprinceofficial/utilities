@@ -24,7 +24,7 @@ server {
 sudo mkdir -p /var/www/arprince.me
 ```
 ```bash
- sudo chown -R www-data:www-data /var/www/arprince.me
+sudo chown -R www-data:www-data /var/www/arprince.me
 ```
 ```bash
 sudo chmod -R 755 /var/www/arprince.me
