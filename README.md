@@ -22,7 +22,10 @@
 ## Auto Connect Server > VS Code or Command Prompt via SSH Key
 - 1. Copy your public key from Local Machine (~/.ssh/id_rsa.pub)
   2. Put the key on the server at (nano ~/.ssh/authorized_keys)
-  3. Fix permissions and execute command (chmod 700 ~/.ssh, chmod 600 ~/.ssh/authorized_keys)
+  3. Fix permissions and execute command (
+     - chmod 700 ~/.ssh
+     - chmod 600 ~/.ssh/authorized_keys
+    )
 ## See ALL Listening Ports Using on Machine
 - ss -tulpn
 ## Check your current IP Address
