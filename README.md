@@ -27,6 +27,9 @@
      - chmod 600 ~/.ssh/authorized_keys
 ## See ALL Listening Ports Using on Machine
 - ss -tulpn
+## Kill Process by using port
+- sudo lsof -i :3000
+- sudo kill -9 2094442
 ## Check your current IP Address
 - curl -s https://api.ipify.org
 
