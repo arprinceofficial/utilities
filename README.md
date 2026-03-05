@@ -29,7 +29,7 @@
 - ss -tulpn
 ## Kill Process by using port
 - sudo lsof -i :3000
-- sudo kill -9 2094442
+- sudo kill -9 2094442 (PID)
 ## Check your current IP Address
 - curl -s https://api.ipify.org
 
