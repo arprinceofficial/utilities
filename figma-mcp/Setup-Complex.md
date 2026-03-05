@@ -19,7 +19,7 @@ Keep this token private. Do not commit it to git or paste it into README or chat
 * press enter or give a name
 * select global
 
-update your MCP config at:
+Update your MCP config at:
 
 ```
 code ~/.config/Code/User/mcp.json
@@ -47,8 +47,8 @@ Example config:
 
 ### 4) Test the connection
 
-ran whoami-figma MCP server
-ran get_figma_data - Figma MCP server
+- ran whoami-figma MCP server
+- ran get_figma_data - Figma MCP server
 
 
 ### 3) Start the MCP server
