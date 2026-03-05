@@ -52,6 +52,7 @@ Example config:
 
 ### 5) Reload the editor
 ### 6) Verify the connection
+- check my figma mcp connection
 - ran whoami-figma MCP server
 - ran get_figma_data - Figma MCP server
 
