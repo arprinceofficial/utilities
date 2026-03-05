@@ -19,10 +19,10 @@ Keep this token private. Do not commit it to git or paste it into README or chat
 * press enter or give a name
 * select global
 
-Create or update your MCP config at:
+update your MCP config at:
 
 ```
-~/.config/Code/User/mcp.json
+code ~/.config/Code/User/mcp.json
 ```
 
 Example config:
