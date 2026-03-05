@@ -44,22 +44,16 @@ Example config:
   }
 }
 ```
-
-### 4) Test the connection
-
-- ran whoami-figma MCP server
-- ran get_figma_data - Figma MCP server
-
-
 ### 3) Start the MCP server
-### 5) Reload the editor
-### 6) Verify the connection
-
-Open the MCP tool list in your editor and confirm Figma tools appear. If tools do not show, check:
-
+### 4) Test the connection
 * The MCP server is running
 * The token is valid
 * The URL matches the server port
+
+### 5) Reload the editor
+### 6) Verify the connection
+- ran whoami-figma MCP server
+- ran get_figma_data - Figma MCP server
 
 
 ---
