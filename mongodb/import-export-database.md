@@ -1,3 +1,7 @@
+### For Cloud Database Need IP Access
+- Under Security->Database & Network Access->Under Network Access-> IP Access List-> Click Add IP Address-> Add your IP Address
+
+
 ### Import Cloud Database:
 From Server to Local
 ```
