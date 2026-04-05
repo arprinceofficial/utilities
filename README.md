@@ -25,6 +25,8 @@
   3. Fix permissions and execute command
      - chmod 700 ~/.ssh
      - chmod 600 ~/.ssh/authorized_keys
+  4. Ensure the folder and file are owned by you (For any problem the use)
+      - chown -R $USER:$USER ~/.ssh
 ## See ALL Listening Ports Using on Machine
 - ss -tulpn
 ## Kill Process by using port
