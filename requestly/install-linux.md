@@ -1,6 +1,6 @@
 ### 1. Download the App
 ```
-https://requestly.com/downloads/
+https://requestly.com/downloads
 ```
 ### 2. Organize the File (move the file out of Downloads)
 ```
@@ -9,7 +9,6 @@ mv ~/Downloads/Requestly-26.3.3.AppImage ~/Applications/
 ```
 ### 3. Create the App Shortcut
 ```
-Open a terminal and create a new "desktop" file:
 nano ~/.local/share/applications/requestly.desktop
 ```
 ### 4. Paste the Configuration
