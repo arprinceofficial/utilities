@@ -16,7 +16,7 @@
 
 ## 1. Clone the source repo as a mirror
 `git clone --mirror https://github.com/OLD-USER/OLD-REPO.git`
-## 2. 2. Add your new repo as destination
+## 2. Add your new repo as destination
 `git remote set-url origin https://github.com/NEW-USER/NEW-REPO.git`
-3. Push everything
+## 3. Push everything
 `git push --mirror`
