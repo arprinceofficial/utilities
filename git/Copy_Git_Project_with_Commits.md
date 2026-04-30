@@ -12,3 +12,11 @@
 - git remote add origin https://github.com/Username-2/test-project-2.git
 ## 7. Push to the New Repository
 - git push --all origin / (git push -u origin main)
+
+
+## 1. Clone the source repo as a mirror
+`git clone --mirror https://github.com/OLD-USER/OLD-REPO.git`
+## 2. 2. Add your new repo as destination
+`git remote set-url origin https://github.com/NEW-USER/NEW-REPO.git`
+3. Push everything
+`git push --mirror`
