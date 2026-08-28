@@ -29,6 +29,9 @@
 - mv  source_directory/*  source_directory/.* destination_directory/
 - mv source_directory/* source_directory/.[^.]* destination_directory/
 
+## Copy Operation
+- cp -rp dev.arprince.me stage.arprince.me
+
 ## File Edit
 - nano .htaccess
 - crt + x => save and exit
