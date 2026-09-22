@@ -1,0 +1,69 @@
+# Meta Ads Manager --- Reel to Messenger (Quick Setup)
+
+## Campaign
+
+-   **Create → Engagement**
+-   Campaign name: `Fume Bay - Reel Messages`
+-   **Budget strategy:** Ad set budget
+
+## Ad Set
+
+-   **Conversion location:** Message destinations
+-   **Facebook Page:** Fume Bay
+-   **Destination:** Messenger
+-   **Performance goal:** Maximize number of conversations
+-   **Bid strategy:** Highest volume
+
+## Budget & Schedule
+
+-   Example for a **\$10 total test:** `$2/day × 5 days`
+-   Set an end date
+-   **Schedule budget increases:** Off
+-   **Ad scheduling:** Off
+
+## Audience
+
+-   **Advantage+ audience:** On
+-   **Location:** Dhaka (+25 mi) / your delivery area
+-   **Minimum age:** 18
+-   **Gender:** All
+-   **Languages:** All languages
+-   Audience suggestions: `Fragrances`, `Perfume`, `Cosmetics`
+-   Don't narrow the audience unnecessarily.
+
+## Placements
+
+-   **Advantage+ placements:** On
+-   Leave other placement settings at default.
+
+## Ad
+
+-   **Ad setup:** Create ad
+-   **Format:** Single image or video
+-   Upload the Reel/video
+-   **Multi-advertiser ads:** Off
+-   **CTA:** Send message
+-   Suggested headline: `অর্ডার করতে মেসেজ করুন`
+
+> If an existing Reel gives **Invalid Creative For Objective
+> (#1487891)** or doesn't allow **Send Message**, use **Create ad** and
+> upload the same video instead.
+
+## Messenger Conversation
+
+Suggested greeting:
+
+`আসসালামু আলাইকুম 👋 Fume Bay-এ স্বাগতম! কী জানতে চান?`
+
+Suggested questions: - 💰 এই পারফিউমের দাম কত? - 🌸 কোন কোন পারফিউম
+Available আছে? - 🚚 Delivery charge কত? - 🛍️ আমি অর্ডার করতে চাই
+
+## Final Check
+
+Before **Publish**, confirm:
+
+**Engagement → Message destinations → Messenger → Maximize conversations
+→ Send message**
+
+For a Messenger-only campaign, website-event tracking is not required.
+
