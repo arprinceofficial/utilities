@@ -4,7 +4,7 @@
 ```bash
 git reset --hard HEAD~1
 ```
-## Force Fully update the branch `
+## Force Fully update the branch
 ```bash
 git push origin HEAD --force
 ```
