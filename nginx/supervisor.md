@@ -10,7 +10,7 @@
 
 ---
 
-# 3. Create a new .conf file full process 
+# 3. Create a new .conf file (Full Process) 
 - sudo nano /etc/supervisor/conf.d/my-new-worker.conf
 
 ```bash 
